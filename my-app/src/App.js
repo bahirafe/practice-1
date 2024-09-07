@@ -1,24 +1,16 @@
-import logo from './logo2222.png';
-import './App.css';
-import {component} from "react"
-class App extends component{
-  constructor(){
-    supper()
-  
-    this.state={
-name:'Bahiran',
-    };
-  }
-  render(){
-    return(
-      <div className='App'>
-        <header className='App-header'>
-          <img src='{logo}' className='App-logo' alt='logo'></img>
-          <p> hello {this.state.name}</p>
-          <button>changr the world</button>
-        </header>
+import './App.css'
+ const items=['item 1','item 2','item 3'];
+function App(){
+  return(
+    <ul>
+      {items.map((item,index)=>(
+        <li key={index}>{item}
 
-      </div>
-    )
-  }
+        </li>
+      ))}
+    </ul>
+  );
 }
+export default  App;
+//map() is used to render a list of <li> elements one for each item in the array 
+// like the an array list out the item of the counter
